@@ -1,0 +1,268 @@
+  <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>AnimeWorld</title>
+ 
+ 
+</head>
+
+<body>
+
+<header>
+  <div style="padding: 20px;">
+  <input 
+    type="text" 
+    id="searchInput" 
+    placeholder="Pesquisar anime..." 
+    style="
+      width: 50%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+    "
+  >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</div>
+  <h1>AnimeWorld</h1>
+</header>
+
+<section class="banner">
+  
+</section>
+<section id="animePage" style="display:none;">
+  <button onclick="voltar()">⬅ Voltar</button>
+  <h1 id="tituloAnime"></h1>
+  <div id="episodios" class="row"></div>
+</section>
+ <section class="section">
+
+<style>
+.article {
+  background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.article h3 {
+  padding: 10px;
+}
+/* MOBILE */
+@media (max-width: 768px) {
+
+  header h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .banner {
+    height: 30vh;
+  }
+
+  .section {
+    padding: 10px;
+  }
+
+  .row {
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .article {
+    min-width: 130px;
+    height: 180px;
+  }
+
+  .article h3 {
+    font-size: 12px;
+  }
+
+}
+</style>
+
+ 
+ 
+<!-- AÇÃO -->
+<h2>Ação</h2>
+<div class="row">
+
+<a href="https://animesonlinecc.to/anime/naruto/" target="_self" class="anime-link" data-anime="Naruto">
+  <div class="article">
+    <img src="https://br.web.img3.acsta.net/pictures/16/04/11/16/56/089875.jpg" alt="">
+    <h3>Naruto</h3>
+  </div>
+</a>
+
+<a href="#" class="anime-link" data-anime="Attack on Titan">
+  <div class="article">
+    <img src="" alt="">
+    <h3>Attack on Titan</h3>
+  </div>
+</a>
+
+<a href="#" class="anime-link" data-anime="Demon Slayer">
+  <div class="article">
+    <img src="" alt="">
+    <h3>Demon Slayer</h3>
+  </div>
+</a>
+
+<a href="#" class="anime-link" data-anime="Jujutsu Kaisen">
+  <div class="article">
+    <img src="" alt="">
+    <h3>Jujutsu Kaisen</h3>
+  </div>
+</a>
+
+<a href="#" class="anime-link" data-anime="Bleach">
+  <div class="article">
+    <img src="" alt="">
+    <h3>Bleach</h3>
+  </div>
+</a>
+
+<a href="#" class="anime-link" data-anime="Black Clover">
+  <div class="article">
+    <img src="" alt="">
+    <h3>Black Clover</h3>
+  </div>
+</a>
+
+<a href="#" class="anime-link" data-anime="Fairy Tail">
+  <div class="article">
+    <img src="" alt="">
+    <h3>Fairy Tail</h3>
+  </div>
+</a>
+
+<a href="#" class="anime-link" data-anime="Vinland Saga">
+  <div class="article">
+    <img src="" alt="">
+    <h3>Vinland Saga</h3>
+  </div>
+</a>
+
+<a href="#" class="anime-link" data-anime="Chainsaw Man">
+  <div class="article">
+    <img src="" alt="">
+    <h3>Chainsaw Man</h3>
+  </div>
+</a>
+
+<a href="#" class="anime-link" data-anime="Akame ga Kill">
+  <div class="article">
+    <img src="" alt="">
+    <h3>Akame ga Kill</h3>
+  </div>
+</a>
+
+<a href="#" class="anime-link" data-anime="One Piece">
+  <div class="article">
+    <img src="" alt="">
+    <h3>One Piece</h3>
+  </div>
+</a>
+
+</div>
+
+<!-- CLÁSSICOS -->
+<h2>Clássicos</h2>
+<div class="row">
+
+<a href="#" class="anime-link" data-anime="Dragon Ball Z"><div class="article"><img src=""><h3>Dragon Ball Z</h3></div></a>
+<a href="#" class="anime-link" data-anime="Fullmetal Alchemist"><div class="article"><img src=""><h3>Fullmetal Alchemist</h3></div></a>
+<a href="#" class="anime-link" data-anime="Cowboy Bebop"><div class="article"><img src=""><h3>Cowboy Bebop</h3></div></a>
+<a href="#" class="anime-link" data-anime="Evangelion"><div class="article"><img src=""><h3>Evangelion</h3></div></a>
+<a href="#" class="anime-link" data-anime="Yu Yu Hakusho"><div class="article"><img src=""><h3>Yu Yu Hakusho</h3></div></a>
+<a href="#" class="anime-link" data-anime="Inuyasha"><div class="article"><img src=""><h3>Inuyasha</h3></div></a>
+<a href="#" class="anime-link" data-anime="Rurouni Kenshin"><div class="article"><img src=""><h3>Rurouni Kenshin</h3></div></a>
+<a href="#" class="anime-link" data-anime="Trigun"><div class="article"><img src=""><h3>Trigun</h3></div></a>
+
+</div>
+
+<!-- SOMBRIO -->
+<h2>Mistério / Sombrio</h2>
+<div class="row">
+
+<a href="#" class="anime-link" data-anime="Death Note"><div class="article"><img src=""><h3>Death Note</h3></div></a>
+<a href="#" class="anime-link" data-anime="Code Geass"><div class="article"><img src=""><h3>Code Geass</h3></div></a>
+<a href="#" class="anime-link" data-anime="Tokyo Ghoul"><div class="article"><img src=""><h3>Tokyo Ghoul</h3></div></a>
+<a href="#" class="anime-link" data-anime="Parasyte"><div class="article"><img src=""><h3>Parasyte</h3></div></a>
+<a href="#" class="anime-link" data-anime="Erased"><div class="article"><img src=""><h3>Erased</h3></div></a>
+<a href="#" class="anime-link" data-anime="Another"><div class="article"><img src=""><h3>Another</h3></div></a>
+<a href="#" class="anime-link" data-anime="Monster"><div class="article"><img src=""><h3>Monster</h3></div></a>
+<a href="#" class="anime-link" data-anime="Psycho-Pass"><div class="article"><img src=""><h3>Psycho-Pass</h3></div></a>
+<a href="#" class="anime-link" data-anime="Mirai Nikki"><div class="article"><img src=""><h3>Mirai Nikki</h3></div></a>
+<a href="#" class="anime-link" data-anime="Elfen Lied"><div class="article"><img src=""><h3>Elfen Lied</h3></div></a>
+
+</div>
+
+<!-- COMÉDIA -->
+<h2>Comédia</h2>
+<div class="row">
+
+<a href="#" class="anime-link" data-anime="One Punch Man"><div class="article"><img src=""><h3>One Punch Man</h3></div></a>
+<a href="#" class="anime-link" data-anime="Gintama"><div class="article"><img src=""><h3>Gintama</h3></div></a>
+<a href="#" class="anime-link" data-anime="KonoSuba"><div class="article"><img src=""><h3>KonoSuba</h3></div></a>
+<a href="#" class="anime-link" data-anime="Saiki Kusuo"><div class="article"><img src=""><h3>Saiki Kusuo</h3></div></a>
+<a href="#" class="anime-link" data-anime="Beelzebub"><div class="article"><img src=""><h3>Beelzebub</h3></div></a>
+<a href="#" class="anime-link" data-anime="Great Teacher Onizuka"><div class="article"><img src=""><h3>Great Teacher Onizuka</h3></div></a>
+
+</div>
+
+<!-- ROMANCE -->
+<h2>Romance</h2>
+<div class="row">
+
+<a href="#" class="anime-link" data-anime="Your Name"><div class="article"><img src=""><h3>Your Name</h3></div></a>
+<a href="#" class="anime-link" data-anime="Your Lie in April"><div class="article"><img src=""><h3>Your Lie in April</h3></div></a>
+<a href="#" class="anime-link" data-anime="Clannad"><div class="article"><img src=""><h3>Clannad</h3></div></a>
+<a href="#" class="anime-link" data-anime="Toradora"><div class="article"><img src=""><h3>Toradora</h3></div></a>
+<a href="#" class="anime-link" data-anime="Horimiya"><div class="article"><img src=""><h3>Horimiya</h3></div></a>
+<a href="#" class="anime-link" data-anime="Anohana"><div class="article"><img src=""><h3>Anohana</h3></div></a>
+<a href="#" class="anime-link" data-anime="My Dress-Up Darling"><div class="article"><img src=""><h3>My Dress-Up Darling</h3></div></a>
+
+</div>
+
+
+</section>
+
+
+<footer>
+  <p>© 2026 AnimeWorld</p>
+</footer>
+ 
+ <script>
+
+const input = document.getElementById("searchInput");
+
+input.addEventListener("keyup", function() {
+  const filtro = input.value.toLowerCase();
+
+  // pega os CARDS (não os links)
+  const cards = document.querySelectorAll(".article");
+
+  cards.forEach(card => {
+    const texto = card.innerText.toLowerCase();
+
+    if (texto.includes(filtro)) {
+      // mostra o card inteiro (inclusive o link)
+      card.parentElement.style.display = "block";
+    } else {
+      card.parentElement.style.display = "none";
+    }
+  });
+
+});
+
+</script>
+  
+ </body>
+</section>
+ 
+</html>
